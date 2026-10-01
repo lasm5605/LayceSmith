@@ -8,7 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
+  more_info: |
     <p> 214-317-6467 </p>
     <p> 4347 Yates Street </p>
     <p> Denver, CO 80212 </p>
