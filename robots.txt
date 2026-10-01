@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://lasm5605.github.io/sitemap.xml
+Sitemap: https://lasm5605.github.io/LayceSmith/sitemap.xml
