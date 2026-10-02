@@ -2,17 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: 4347 Yates Street, Denver, CO 80212
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
 
-ContactInfo: >
-Phone: 214-317-6467 <br>
-Email: laycedsmith@gmail.com <br>
-LinkedIn: www.linkedin.com/in/laycesmith <br>
+  more_info: >
+    Phone: 214-317-6467 <br>
+    Email: <a href="mailto:laycedsmith@gmail.com">laycedsmith@gmail.com</a><br>
+    LinkedIn: <a href="https://www.linkedin.com/in/laycesmith">linkedin.com/in/laycesmith</a>
 
 ---
 
