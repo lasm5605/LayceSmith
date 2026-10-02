@@ -8,18 +8,14 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    214-317-6467 <br>
-    4347 Yates Street <br>
-    Denver, CO 80212 <br>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+  Denver, CO <br>
+  Phone: 214-317-6467 <br>
+  Email: laycedsmith@gmail.com <br>
+  LinkedIn: www.linkedin.com/in/laycesmith <br>
+
+
 social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
@@ -27,6 +23,17 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-My name is Layce Smith. I currently hold a bachelor's degree in English from the University of Texas at Austin and am working on a second degree in computer science from the University of Colorado Boulder. I have worked in publishing, education, and I owned my own baking business for a spell. Most recently, I was working in UX research, and I hope to transition into data analytics once I finish my degree.
+My name is Layce Smith. I currently hold a bachelor's degree in English from the University of Texas at Austin and am working on a second degree in computer science from the University of Colorado Boulder. I have 2+ years of experience as a UX Research Analyst. 
 
-I live in Denver with my husband, our one-year-old son, and a small brood of chickens. 
+**Coding Languages:**
+* Python
+* C++
+
+**Tools:**
+* PowerBi
+* Tableau
+* Marvin UX Repository
+* Userlytics
+* Figma
+* Google Workspace
+* Microsoft 365
