@@ -13,17 +13,15 @@ horizontal: false
 
 ### Week 1 - Project Proposal
 
-Summary Forthcoming...
+My goal for this project is to build a task management dashboard in React.
 
 ### Week 2 - Setting up the Environment
 
-I am coming into the class a week late, so this week has really been about playing catch up. To that end, I have set up a web page via GitHub and have already started thinking about/setting up an environment for working on my project. I'm really interested in using React to build a task management dashboard. The main challenges will be the fact that I have never used React or Vite or JavaScript or HTML or CSS. SO...everything will be very new and I have a lot of ground to cover very quickly.
-
-Professor Guinn recommended I start by setting up the React/Vite project, creating the GitHub repository for the project, and sketching out what I want the application to look like, which all sounds like a good plan to me. So far, I have been able to install node.js on my computer, which allowed me to install the JavaScript libraries. I have also managed to stand up the basic project in VS code using a Vite template for React. Just getting these initial steps done has already been really gratifying.
+To begin this project, I installed node.js on my computer, which allowed me to install the JavaScript libraries. I also stood up the basic file structure in VS code using a Vite template for React.
 
 ### Week 3 - Version Control & Basic UI Design
 
-In order to use GitHub for version control, I had to connect my locally saved project folders to a GitHub repository where I can push new commits. This required me to install Git on my computer and then set up a remote connection with the bash shell. Then, in following my project timeline, I went ahead and drew a wireframe of the application interface that I want to create. What I have is maybe a bit ambitious, and I'm not sure what out-of-the-box components React might offer, so it's possible the design might change.  
+In order to use GitHub for version control, I had to connect my locally saved project folders to a GitHub repository where I can push new commits. This required me to install Git on my computer and then set up a remote connection with the bash shell. Then, in following my project timeline, I went ahead and drew a wireframe of the application interface that I want to create.  
 
 <img width="949" height="713" alt="image" src="https://github.com/user-attachments/assets/35418a2a-5b4a-412b-8674-d06ad5436840" />
 
@@ -51,59 +49,22 @@ I used MidJourney to generate a quick, simple logo for my dashboard and used tha
 
 <img width="1914" height="958" alt="image" src="https://github.com/user-attachments/assets/952706c0-0ba1-4e5c-b471-30b3e0f69468" />
 
+### Week 5 - Diving into State Management/Information Flow
+
+Last week I focused on familiarizing myself with the Material UI React Component Library to get an idea of what the UI could look like. This week was all about understanding states and props and how information flows between the components. 
+
+Here is what I learned:
+
+In React, parent/child relationships define how components (javascript functions) are configured in a tree, and this configuration is critical to state management, as state is shared by moving it up to the nearest common parent. Information flows down from parent to child: the parent controls a child's props, which are the data and functions it hands down. The child can display that data and call those functions to request changes, but the state itself stays with the parent.
+
+Here is a diagram I created in FigJam that shows how my components will interact with each other:
+
+<img width="641" height="686" alt="State Management Diagram" src="https://github.com/user-attachments/assets/329f6f88-0119-4d9c-95b3-9457a3879412" />
+ 
+The parent component of my React dashboard is App. It passes data and functions to its children as props, which can be any JavaScript value. App owns two pieces of shared state: the tasks array and the selected filter. From these it calculates visibleTasks, which it passes to TaskList. It passes filter and a setter function to FilterTabs, which only displays the "To Do" and "Ta Da" buttons and reports which one is clicked. App also holds the functions that add, edit, and delete tasks and passes them down, so children can request changes without owning the data. TaskForm receives only the add function and keeps its own title state for the text being typed, and each TaskItem keeps its own editing state. App is the nearest common parent of the components that share tasks and filter, which is why that state lives there. 
+ 
+NOTE: Eventually, tasks will be saved to localStorage so they persist after a refresh. 
+
+With all of this in mind, I have started to reconfigure my component files. Although it was nice to play around with the Material UI React Components last week, the way I configured the components in order to make that visual does not align with the state management plan above. I will go back and build out the functionality and then can focus on reimplementing the design once I know that the functions are communicating correctly. 
 
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
-
-{% else %}
-
-<!-- Display projects without categories -->
-
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
