@@ -13,15 +13,15 @@ horizontal: false
 
 ## Week 1 - Project Proposal
 
-###Vision Statement
+### Vision Statement
 
 My goal is to transition from UX Research into Data Analytics by developing the skills to build custom, interactive dashboards. While tools like Power BI and Tableau are valuable for internal reporting, learning React will allow me to create more flexible, fully customized applications. Since I am covering other analytics tools in a separate course this semester, this project will focus on building a dashboard from the ground up.
 
-###Motivation
+### Motivation
 
 I am excited to take a product from initial design through functional implementation. My experience has focused on designing user interfaces and researching usability; this project will allow me to expand those skills by bringing a design to life through code. Completing a fully functional application will be both a valuable learning experience and a rewarding professional accomplishment.
 
-###Risks and Mitigation
+### Risks and Mitigation
 
 Key project risks include scope creep, data loss, complex state management, and software bugs. I plan to mitigate these risks by:
 
@@ -33,7 +33,7 @@ Key project risks include scope creep, data loss, complex state management, and 
 
 - **Reducing bugs:** Developing incrementally and testing frequently to identify and resolve issues early.
 
-###Project Assessment and Timeline
+### Project Assessment and Timeline
 
 The project will follow a 10-week development plan, with flexibility to adjust as needed.
 
