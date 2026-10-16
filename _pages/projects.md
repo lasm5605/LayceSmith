@@ -8,12 +8,61 @@ nav_order: 3
 display_categories: [work, fun]
 horizontal: false
 ---
-# Layce Smith
-## CSPB 3112 - Project Web Page
+
+## Building a React Task Dashboard
 
 ### Week 1 - Project Proposal
 
-My goal for this project is to build a task management dashboard in React.
+####Vision Statement
+
+My goal is to transition from UX Research into Data Analytics by developing the skills to build custom, interactive dashboards. While tools like Power BI and Tableau are valuable for internal reporting, learning React will allow me to create more flexible, fully customized applications. Since I am covering other analytics tools in a separate course this semester, this project will focus on building a dashboard from the ground up.
+
+####Motivation
+
+I am excited to take a product from initial design through functional implementation. My experience has focused on designing user interfaces and researching usability; this project will allow me to expand those skills by bringing a design to life through code. Completing a fully functional application will be both a valuable learning experience and a rewarding professional accomplishment.
+
+####Risks and Mitigation
+
+Key project risks include scope creep, data loss, complex state management, and software bugs. I plan to mitigate these risks by:
+
+- **Managing scope:** Prioritizing essential features within the 10-week timeline and pursuing additional functionality only if time allows.
+
+- **Preventing data loss:** Using the browser's localStorage API to preserve task data between sessions.
+
+- **Simplifying state management:** Following React best practices by minimizing redundant state and deriving values from existing data when possible.
+
+- **Reducing bugs:** Developing incrementally and testing frequently to identify and resolve issues early.
+
+####Project Assessment and Timeline
+
+The project will follow a 10-week development plan, with flexibility to adjust as needed.
+
+**Week 1:** Set up the React project using Vite in VS Code.
+
+**Week 2:** Create a GitHub repository, sketch the interface, and learn React components, props, and state.
+
+**Week 3:** Build the interface with HTML and CSS; implement task creation and deletion.
+
+**Week 4:** Add task editing and completion functionality.
+
+**Week 5:** Implement task priorities and due dates.
+
+**Week 6:** Use localStorage to persist task data between sessions.
+
+**Week 7:** Add filtering and sorting for overdue, high-priority, and completed tasks.
+
+**Week 8:** Build a dashboard displaying remaining, completed, and overdue tasks; refine the visual design.
+
+**Week 9:** Test functionality, resolve bugs, improve usability, and consider an additional feature if time permits.
+
+**Week 10:** Deploy the application, document the project in GitHub with a README and screenshots, and add it to my portfolio.
+
+This timeline provides a structured path toward a functional, polished application while allowing for adjustments based on progress and emerging challenges.
+
+####Project Portfolio
+
+https://lasm5605.github.io/
+
 
 ### Week 2 - Setting up the Environment
 
