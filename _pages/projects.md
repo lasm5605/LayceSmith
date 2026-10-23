@@ -120,6 +120,22 @@ The functional interface design I created last week has helped me build my app t
 
 The functions I have already implemented seem to render correctly at this point. However, all the data disappears when the page refreshes. Therefore, the next thing I need to learn about and implement is saving the data to localStorage. Based on what I’ve read so far, there is a way to create custom hooks in React, and that seems to be the best way to save to localStorage, so I will begin researching and coding that functionality next. Once I have that key part of the project finished, then I plan to go back and work on adding a task priority feature and a task completion timestamp feature before making the UI look a little more polished. As of now, I feel a little ahead of schedule and am hoping to have time to come up with one bonus feature to add. Overall, I am feeling really good about what I’ve got so far.
 
+## Week 8 - A New Look & Saving Locally!
+
+Last week, I spent time learning more about state management in React. I learned that React has a built-in hook called useState, which lets components "remember" information but only upon rerenders--not total refreshes of the web page. Therefore, I had determined that I needed to save the information locally. I had also learned last week that React allows you to build custom hooks, and since a "save locally" hook doesn't already exist in the React documentation, I determined that I would need to build one. 
+
+The only values I really need my app to store at this time are the task items themselves and which filtered view they live under (incomplete or complete). That made the process of saving locally much easier, I think, and it was a morale boost to check local storage in the browser and see my 'task' and 'filter' keys and their corresponding data listed (see image below). 
+
+<img width="1505" height="776" alt="image" src="https://github.com/user-attachments/assets/e250dbe6-9db1-4eba-8b87-9111f397fcc8" />
+
+For anyone following along with my progress. You may notice that I also went ahead and cleaned up the UI and made it look a little more design-y. This was a matter of adding html directly into my react component .jsx files, and then I have a single separate .css file for making it all look nice. 
+
+One really fun, kind of last-minute addition is the date and time feature on that page. JavaScript, I learned, has a built-in class called Date that is available in every JavaScript environment, including browsers and Node. It pulls the date directly from the user's computer. It was an easy implementation that I think adds a lot to the overall experience.
+
+Since I've already got the data I need saving locally, and I have a firmer grasp on how to implement html and css for a more polished looking app, I feel a little ahead of schedule. There are a few things I need to tweak in the UI, but I think I will actually spend most of next week trying to add a feature for prioritizing tasks. I have somewhat of an idea of how I will do this, but I still anticipate it taking me a while to figure out.
+
+
+
 
 
 
