@@ -152,7 +152,17 @@ Originally, I planned on adding a counter to the dashboard–something that says
 
 <img width="2000" height="1405" alt="image" src="https://github.com/user-attachments/assets/bfef1725-bf47-4381-94bd-6886dba7f4f1" />
 
+## Week 10 - Finishing Touches and Deployment
 
+According to my initial project proposal, this week was dedicated to deploying my app so users could access it. I’d been dreading this part of the project because I didn’t really know what deployment would involve, but it turned out to be one of the easiest steps. Because my task dashboard is a single-page app that saves tasks locally in the user’s browser, it can be deployed on any static hosting site. I chose Netlify because it works well with React and Vite. Deploying was as simple as signing up for Netlify with my GitHub account and choosing which repository to deploy. Netlify handled the rest.
+
+Since deployment took far less time than I expected, I used the extra time to improve the look and functionality of the app. First, I added subtasks to each task item. This feature became important to me over the course of the project, as I kept making to-do lists and wanting to break some tasks down further. Implementing it was fairly simple, since it’s essentially a second level of task items and much of the code already existed. I also made the welcome message more engaging and dynamic: it now changes depending on the time of day, and a small animated coffee mug appears next to the morning message. Beyond that, I made a few smaller tweaks to the UI, such as fonts and spacing.
+
+I definitely plan to keep working on this project even after the class ends. I would like to implement a progress ring showing how many of a day's tasks are done. I’d also like to add more fun animations and interactive elements, including an option for users to choose from different color schemes and background themes. Eventually, it might even be nice to have
+
+accounts and a backend so lists sync across devices.
+
+If you’d like to try it out, here’s the link to the task dashboard: https://leafy-capybara-0d6161.netlify.app/
 
 
 
