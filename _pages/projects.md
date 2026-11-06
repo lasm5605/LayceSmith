@@ -134,6 +134,26 @@ One really fun, kind of last-minute addition is the date and time feature on tha
 
 Since I've already got the data I need saving locally, and I have a firmer grasp on how to implement html and css for a more polished looking app, I feel a little ahead of schedule. There are a few things I need to tweak in the UI, but I think I will actually spend most of next week trying to add a feature for prioritizing tasks. I have somewhat of an idea of how I will do this, but I still anticipate it taking me a while to figure out.
 
+## Week 9 - Prioritization and Due Date Features Added
+
+Last week, I focused on saving the task list and filters to the browser’s local storage so the user’s session persists after a page refresh. I also added a date/time feature to the dashboard and worked on the .css file and on the html within the return sections of the .jsx files to make the UI appear more polished. This week, I decided to implement a new feature: task prioritization.
+
+I decided to go the drag-and-drop route for implementing a task prioritization feature in my app. The idea is that the top priority is always the first item in the list, and new items go to the last position by default (lowest priority) unless the user drags and drops them somewhere else. The most popular, actively maintained drag-and-drop library for React seems to be dnd-kit, so I started by installing @dnd-kit/react for sortable lists and @dnd-kit/helpers for the ability to move items in the list.
+
+Dnd-kit has a built-in React component called DragDropProvider that wraps around any other component (the task list, in this case) and turns on drag and drop for everything inside it (the items in the task list). move is one of the helper functions from dnd-kit. It takes the array and the drag event and returns a new array with the dragged item in its new position. It reads from the event which task was dragged and where it landed, so no calculations are involved.
+
+The prioritization feature required changes to the task item component. I added a ref to the element that should move (the entire task item) and a handleRef to the part the user clicks and drags. The task items now display a sort icon to show that they can be moved to change priority, and this icon gets the handleRef. To make it work, I also added a new function to my main app file that does a few important things. First, it stops running early if a drag is cancelled (the item doesn’t make it to a drop point). Then it takes the tasks on screen and the drag event, and returns a new array with the dragged task in its new position. Finally, because my task list shows only To Do or only Ta Da tasks at a time, the function reorders just the visible tasks and slots them back into the full list, so the hidden tasks don’t get scrambled.
+
+This week, I also cleaned up the “Ta Da” view. Tasks under this filter now show only a checkbox, a timestamp of completion, and a delete button for the user to delete the completed tasks once they no longer want to see them. (Note: Unchecking the box still returns the task to the “To Do” list in its original position.) The completed items appear in the “Ta Da” view in the order in which they were prioritized on the “To Do” side. However, I now have the 5 most recent  “Ta Da” tasks appearing in the right-hand column of the screen in the order in which they were actually completed (most recent to most distant). I might just keep this as an alternative to having a  “show all tasks” filter since I really don’t thing 3 tabs  in the left column (To Do, Ta Da, and All) would have as much impact as just the 2 (To Do and Ta Da).
+
+I also added a due date feature, which I was actually supposed to implement earlier in the project but forgot about. The easiest way to do this was by making due date another property of a task (edit and delete being other properties). My app uses a date-time picker that’s built into the browser, but I actually made the input box invisible and have the user open the calendar picker by clicking on a calendar icon that matches the rest of the app’s aesthetic. The selected due date and time get passed back to the main app as just another task property in the list of tasks. 
+
+Originally, I planned on adding a counter to the dashboard–something that says “only {count] number of tasks to go!” However, I don’t really see the counter as a particularly useful feature at this time. Therefore, I would rather spend my time next week working on a sublist feature. For example, if one of the tasks on the list is “go grocery shopping,” I want the user to be able to add a secondary, collapsible list that contains the grocery store items to get.
+
+<img width="2000" height="1405" alt="image" src="https://github.com/user-attachments/assets/bfef1725-bf47-4381-94bd-6886dba7f4f1" />
+
+
+
 
 
 
